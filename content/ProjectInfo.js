@@ -19,6 +19,13 @@ const ProjectInfo = [
         link: "https://github.com/hexbacon/DOT-NYC",
         page: undefined,
         icon: "📈"
+    },
+    {
+        name: "Promptopia",
+        desc: "Prompting tool for modern world to discover, create and share creative prompts",
+        link: "https://github.com/hexbacon/promptopia", 
+        page: "https://replit.com/@devChrisMena/promptopia?v=1",
+        icon: "💬"
     }
 ]
 
