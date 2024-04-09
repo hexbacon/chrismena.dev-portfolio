@@ -1,8 +1,10 @@
-'use client'
+'use client' // Client rendering
+// Import libraries and components
 import ProjectCard from "@components/ProjectCard";
 import ProjectInfo from "@content/ProjectInfo";
 import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
+
 export default function Project() {
     return (
         <main className="flex flex-col justify-center items-center w-full h-full">
@@ -18,6 +20,7 @@ export default function Project() {
                 />
             </h1>
             <ul className="flex flex-col space-y-4">
+                {/*Itirate Project Info data and create ProjectCard Element */}
                 {ProjectInfo.map((project, index) => (
                     <ProjectCard key={index} {...project} />
                 ))}
