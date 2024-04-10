@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils"
 import { Icons } from "./icons"
 import { MainNav } from "./main-nav"
 import { MobileNav } from "./mobile-nav"
+import { ModeToggle } from "./mode-toggle"
+
 export function SiteHeader() {
     return (
     <header className="sticky top-0 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -24,6 +26,7 @@ export function SiteHeader() {
                             <span className="sr-only">LinkedIn</span>
                         </div>
                     </Link>
+                    <ModeToggle />
                     <MobileNav />
                 </nav>
             </div>
