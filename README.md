@@ -1,41 +1,36 @@
-# Chrismena.dev-app
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-![alt text](./public/assets/images/homepage.png "chrismena.dev")
+## Getting Started
 
-Welcome to the repo showcasing the work and progress for building my own personal portfolio site. Chrismena.dev uses the [NextJS](https://nextjs.org) React Framework, taking advantage of the use of serveless API endpoint.
-
-
-
-## Run Locally
-
-Clone the project
+First, run the development server:
 
 ```bash
-  git clone https://github.com/hexbacon/chrismena.dev-app.git
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Go to the project directory
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-  cd my-project
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Install dependencies
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-```bash
-  npm install
-```
+## Learn More
 
-Start the server
+To learn more about Next.js, take a look at the following resources:
 
-```bash
-  npm run dev
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Authors
+## Deploy on Vercel
 
-- Insipired by [@nuro](https://github.com/nurodev)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- [@hexbacon](https://github.com/hexbacon)
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
