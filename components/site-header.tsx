@@ -22,7 +22,7 @@ export function SiteHeader() {
                     </Link>
                     <Link href={siteConfig.links.linkedIn} target="_blank" rel="noreferrel">
                         <div className={cn(buttonVariants({variant: "ghost"}), "w-10 px-0 hidden sm:inline-flex")}>
-                            <Icons.twitter className="h-4 w-4" />
+                            <Icons.linkedin className="h-4 w-4" />
                             <span className="sr-only">LinkedIn</span>
                         </div>
                     </Link>

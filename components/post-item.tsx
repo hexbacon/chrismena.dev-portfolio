@@ -2,6 +2,8 @@ import { Calendar } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { formatDate, cn } from "@/lib/utils";
+import { Image } from "velite";
+
 interface PostItemsProps {
     slug: string,
     title: string,
