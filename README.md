@@ -5,6 +5,24 @@
 Welcome to the repo showcasing the work and progress for building my own personal portfolio site. Chrismena.dev uses the [NextJS](https://nextjs.org) React Framework, taking advantage of the use of serveless API endpoint.
 
 
+## Table of Content
+
+[Features](#features)
+
+[Run Locally](#runlocally)
+
+[Documentation](#documentation)
+
+[Authors](#authors)
+
+
+## Features
+
+- Light/dark mode toggle
+- Static Blog
+- MXD Convertion
+- Mobile Response
+
 
 ## Run Locally
 
