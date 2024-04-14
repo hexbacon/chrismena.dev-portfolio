@@ -1,26 +1,28 @@
+'use client'
 import { Calendar } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { formatDate, cn } from "@/lib/utils";
-import { Image } from "velite";
+import { motion } from "framer-motion";
 
 interface PostItemsProps {
-    slug: string,
-    title: string,
-    description?: string,
-    date: string
+    slug: string;
+    title: string;
+    description?: string;
+    date: string;
 }
 
-export function PostItem({slug, title, description, date}: PostItemsProps) {
-
-    return(
+export function PostItem({ slug, title, description, date }: PostItemsProps) {
+    return (
         <article className="flex flex-col gap-2 border-border border-b py-3">
             <div>
                 <h2 className="text-2xl font-bold">
                     <Link href={slug}>{title}</Link>
                 </h2>
             </div>
-            <div className="max-w-none text-muted-foreground">{description}</div>
+            <div className="max-w-none text-muted-foreground">
+                {description}
+            </div>
             <div className="flex justify-between items-center">
                 <dl>
                     <dt className="sr-only">Published</dt>
@@ -29,10 +31,21 @@ export function PostItem({slug, title, description, date}: PostItemsProps) {
                         <time dateTime={date}>{formatDate(date)}</time>
                     </dd>
                 </dl>
-                <Link href={slug} className={cn(buttonVariants({variant: "link"}), "py-0")}>
-                    Read more →
-                </Link>
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    <Link
+                        href={slug}
+                        className={cn(
+                            buttonVariants({ variant: "link" }),
+                            "py-0"
+                        )}
+                    >
+                        Read more →
+                    </Link>
+                </motion.button>
             </div>
         </article>
-    )
+    );
 }
