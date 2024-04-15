@@ -21,34 +21,24 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         POSTS_PER_PAGE * (currentPage - 1),
         POSTS_PER_PAGE * currentPage
     );
+
     return (
-        <div className="container max-w-4xl py-6 lg:py-10">
-            <hr className="mt-8" />
+        <div className="container max-w-5xl py-6 lg:py-10">
             {displayPosts?.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-[auto,1fr] gap-4">
                     {displayPosts.map((post, index) => {
                         const { slug, date, title, description, image } = post;
-                        if (index === 0) {
-                            return (
-                                <div key={index} className="md:col-span-3">
-                                    <PostItemsCard
-                                        slug={slug}
-                                        date={date}
-                                        title={title}
-                                        description={description?.slice(0, 50)}
-                                        image={image}
-                                    />
-                                </div>
-                            );
-                        }
+                        const side = index === 0; // 'side' is true for the first item only
+
                         return (
-                            <div key={index} className="md:col-span-1">
+                            <div key={index} className={`md:col-span-${index === 0 ? '3' : '1'}`}>
                                 <PostItemsCard
                                     slug={slug}
                                     date={date}
                                     title={title}
-                                    description={description?.slice(0, 50)}
+                                    description={description}
                                     image={image}
+                                    side={side && index === 0} // Pass 'side' true only for the first element and only on screens smaller than 'md'
                                 />
                             </div>
                         );

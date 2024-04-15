@@ -12,18 +12,18 @@ const computedFields = <T extends { slug: string }>(data: T) => ({
 const posts = defineCollection({
     name: "Post",
     pattern: "blog/**/*.mdx",
-    schema: s
-        .object({
-            slug: s.path(),
-            title: s.string().max(99),
-            description: s.string().max(999).optional(),
-            date: s.isodate(),
-            published: s.boolean().default(true),
-            body: s.mdx(),
-            image: s.string().url().optional(),
-        })
-        .transform(computedFields),
+    schema: s.object({
+        slug: s.path(),
+        title: s.string().max(99),
+        description: s.string().max(999).optional(),
+        date: s.isodate(),
+        published: s.boolean().default(true),
+        body: s.mdx(),
+        image: s.string().regex(/^(https?:\/\/[\w-]+(\.[\w-]+)+\S*|\/[\w-]+(\/[\w-]+)*\/[\w-]+\.[\w-]+)$/i).optional(),
+    })
+    .transform(computedFields),
 });
+
 
 export default defineConfig({
     root: "content",

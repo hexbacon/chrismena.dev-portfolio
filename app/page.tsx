@@ -31,8 +31,6 @@ export default function Home() {
           </code>
         </p>
       </section>
-      <section className='flex pt-5'>
-      </section>
     </motion.section>
 
   );
