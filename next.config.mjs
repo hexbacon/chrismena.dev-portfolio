@@ -2,6 +2,9 @@ import { build } from 'velite'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    images: {
+        domains: ['github.com', 'example.com', 'raw.githubusercontent.com'], // Add the domains you want to allow here
+    },
     // othor next config here...
     webpack: config => {
         config.plugins.push(new VeliteWebpackPlugin())

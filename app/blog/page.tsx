@@ -1,5 +1,5 @@
 import { posts } from "#site/content";
-import { PostItem } from "@/components/post-item";
+//import { PostItem } from "@/components/post-item";
 import { PostItemsCard } from "@/components/post-item-card";
 import { QueryPagination } from "@/components/query-pagination";
 import { sortPosts } from "@/lib/utils";
@@ -27,7 +27,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             {displayPosts?.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-[auto,1fr] gap-4">
                     {displayPosts.map((post, index) => {
-                        const { slug, date, title, description } = post;
+                        const { slug, date, title, description, image } = post;
                         if (index === 0) {
                             return (
                                 <div key={index} className="md:col-span-3">
@@ -36,6 +36,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                                         date={date}
                                         title={title}
                                         description={description?.slice(0, 50)}
+                                        image={image}
                                     />
                                 </div>
                             );
@@ -47,6 +48,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                                     date={date}
                                     title={title}
                                     description={description?.slice(0, 50)}
+                                    image={image}
                                 />
                             </div>
                         );

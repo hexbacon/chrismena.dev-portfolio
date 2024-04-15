@@ -15,10 +15,7 @@ interface PostItemsCardProps {
     title: string;
     description?: string;
     date: string;
-    image?: {
-        src: string;
-        alt: string;
-    };
+    image?: string
 }
 
 export function PostItemsCard({
@@ -34,8 +31,8 @@ export function PostItemsCard({
                 {image && (
                     <div className="relative w-full h-48">
                         <Image
-                            src={image.src}
-                            alt={image.alt}
+                            src={image}
+                            alt="Descriptive text for the image"
                             layout="fill"
                             objectFit="cover"
                             className="transition-transform duration-300 group-hover:scale-110"
