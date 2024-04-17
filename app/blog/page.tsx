@@ -1,6 +1,5 @@
 import { posts } from "#site/content";
-//import { PostItem } from "@/components/post-item";
-import { PostItemsCard } from "@/components/post-item-card";
+import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
 import { sortPosts } from "@/lib/utils";
 
@@ -21,33 +20,38 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         POSTS_PER_PAGE * (currentPage - 1),
         POSTS_PER_PAGE * currentPage
     );
-
     return (
-        <div className="container max-w-5xl py-6 lg:py-10">
+        <div className="container max-w-4xl py-6 lg:py-10">
+            <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
+                <div className="flex-1 space-y-4">
+                    <h1 className="inline-block font-black text-4xl lg:text-5xl">
+                        Blog
+                    </h1>
+                    <p className="text-xl text-muted-foreground">
+                        My ramblings on all things web.
+                    </p>
+                </div>
+            </div>
+            <hr className="mt-8" />
             {displayPosts?.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-[auto,1fr] gap-4">
-                    {displayPosts.map((post, index) => {
-                        const { slug, date, title, description, image } = post;
-                        const side = index === 0; // 'side' is true for the first item only
-
+                <ul className="flex flex-col">
+                    {displayPosts.map((post) => {
+                        const { slug, date, title, description } = post;
                         return (
-                            <div key={index} className={`md:col-span-${index === 0 ? '3' : '1'}`}>
-                                <PostItemsCard
+                            <li key={slug}>
+                                <PostItem
                                     slug={slug}
                                     date={date}
                                     title={title}
                                     description={description}
-                                    image={image}
-                                    side={side && index === 0} // Pass 'side' true only for the first element and only on screens smaller than 'md'
                                 />
-                            </div>
+                            </li>
                         );
                     })}
-                </div>
+                </ul>
             ) : (
                 <p>Nothing to see here yet</p>
             )}
-
             <QueryPagination
                 totalPages={totalPage}
                 className="justify-end mt-4"
