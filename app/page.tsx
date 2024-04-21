@@ -36,7 +36,7 @@ export default function Home() {
                 </code>
             </p>
             <div className="flex justify-center pt-5">
-                <Link href={"/static/data/resume.pdf"} target='_blank'>
+                <Link href={"./static/data/resume.pdf"} target='_blank'>
                     <Button variant={"ghost"}>
                         <Icons.notes className="mr-2 h-4 w-4" /> Resume
                     </Button>
