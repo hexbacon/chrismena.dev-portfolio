@@ -21,6 +21,8 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        cursive: ["GoldenSignature"],
+        helvetica: ["Helvetica"]
       },
       colors: {
         border: "hsl(var(--border))",
