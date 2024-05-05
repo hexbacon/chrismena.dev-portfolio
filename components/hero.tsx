@@ -1,3 +1,6 @@
+
+import { SocialIcons } from "@/section/social-icons";
+import { ToolTip } from "./tooltip";
 export function Hero() {
     return (
         <div className="container flex flex-col items-center">
@@ -19,6 +22,15 @@ export function Hero() {
                 Just an aspiring✨ <span>TypeScript Full-Stack</span> developer
                 who loves to build something cool.
             </p>
+            <div className="pt-20 flex">
+                {
+                    SocialIcons.map((icon, idx) => {
+                        return(
+                            <ToolTip text={icon.name} href={icon.href} icon={icon.icon} key={idx} />
+                        )
+                    })
+                }
+            </div>
         </div>
     );
 }
