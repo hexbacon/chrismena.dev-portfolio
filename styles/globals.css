@@ -76,6 +76,9 @@
   }
 
   @font-face {
-    font-family: "cursive";
-    src: local("GoldenSignature"), url("../assets/GoldenSignature.otf") format("otf");
+    font-family: "golden";
+    src: local("GoldenSignature"), url("/fonts/GoldenSignature.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
   }
+  

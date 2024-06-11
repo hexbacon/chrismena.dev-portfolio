@@ -1,5 +1,6 @@
 import { SocialIcons } from "@/section/social-icons";
 import { ToolTip } from "./tooltip";
+
 export function Hero() {
     return (
         <div className="container flex flex-col items-center">
@@ -21,8 +22,9 @@ export function Hero() {
                 Just an aspiring✨ <span>TypeScript Full-Stack</span> developer
                 who loves to build something cool.
             </p>
-            <div className="pt-20 w-full flex justify-evenly">
+            <div className="pt-20 w-[60%] flex justify-evenly">
                 {
+                    // Loop through the SocialIcons array and render each icon
                     SocialIcons.map((icon, idx) => {
                         return(
                             <ToolTip text={icon.name} href={icon.href} icon={icon.icon} key={idx} />

@@ -21,7 +21,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
-        cursive: ["GoldenSignature"],
+        golden: ["golden", "sans-serif"],
         helvetica: ["Helvetica"]
       },
       colors: {
