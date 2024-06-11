@@ -1,4 +1,3 @@
-
 import { SocialIcons } from "@/section/social-icons";
 import { ToolTip } from "./tooltip";
 export function Hero() {
@@ -22,7 +21,7 @@ export function Hero() {
                 Just an aspiring✨ <span>TypeScript Full-Stack</span> developer
                 who loves to build something cool.
             </p>
-            <div className="pt-20 flex">
+            <div className="pt-20 w-full flex justify-evenly">
                 {
                     SocialIcons.map((icon, idx) => {
                         return(
