@@ -1,4 +1,5 @@
 import Image from "next/image";
+// About me section
 export function About() {
     return (
         <div className="pt-10 w-full flex lg:flex-row lg:justify-evenly lg:items-start sm:flex-col sm:items-center sm:justify-center  ">
