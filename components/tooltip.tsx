@@ -24,7 +24,7 @@ export function ToolTip({ text, href, icon }: TooltipProps) {
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger>
-                    <Link href={href} className="px-5 p-9" target="_blank">
+                    <Link href={href} className="p-9" target="_blank">
                         {React.createElement(icon, { className: "h-9 w-9" })}
                     </Link>
                 </TooltipTrigger>

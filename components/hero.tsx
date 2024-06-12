@@ -7,6 +7,7 @@ export function Hero() {
             <h1 className="text-4xl font-bold py-4">
                 Hi, I&apos;m Christopher Mena! 👋
             </h1>
+            {/* Video of me: Make BG Transparent */}
             <video
                 className="h-[170px] w-[170px] md:h-[190px] md:w-[190px]"
                 muted
@@ -22,7 +23,7 @@ export function Hero() {
                 Just an aspiring✨ <span>TypeScript Full-Stack</span> developer
                 who loves to build something cool.
             </p>
-            <div className="pt-20 w-[60%] flex justify-evenly">
+            <div className="pt-20 w-[20%] flex justify-evenly">
                 {
                     // Loop through the SocialIcons array and render each icon
                     SocialIcons.map((icon, idx) => {
