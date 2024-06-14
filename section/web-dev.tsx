@@ -1,30 +1,27 @@
 import JS from "@/public/assets/icons/javascript.png";
+import NT from "@/public/assets/icons/nest-js.png";
+import ND from "@/public/assets/icons/nodejs.png";
+import TP from "@/public/assets/icons/typescript.png";
+
 export const WebDev = [
     {
         name: "JavaScript",
-        logo: JS
+        icon: JS,
+        href: ""
     },
     {
-        name: "JavaScript",
-        logo: JS
+        name: "NextJS",
+        icon: NT,
+        href: ""
     },
     {
-        name: "JavaScript",
-        logo: JS
+        name: "NodeJS",
+        icon: ND,
+        href: ""
     },
     {
-        name: "JavaScript",
-        logo: JS
-    },
-    {
-        name: "JavaScript",
-        logo: JS
-    },{
-        name: "JavaScript",
-        logo: JS
-    }
-    ,{
-        name: "JavaScript",
-        logo: JS
+        name: "TypeScript",
+        icon: TP,
+        href: ""
     }
 ]

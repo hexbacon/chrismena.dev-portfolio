@@ -15,8 +15,8 @@ interface TooltipProps {
     text: string;
     href: string;
     icon: React.ForwardRefExoticComponent<
-        IconProps & React.RefAttributes<SVGSVGElement>
-    >;
+        IconProps & React.RefAttributes<SVGSVGElement> 
+    > ; 
 }
 
 export function ToolTip({ text, href, icon }: TooltipProps) {
