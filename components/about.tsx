@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Button } from "./ui/button";
+import Link from "next/link";
 // About me section
 export function About() {
     return (
@@ -19,6 +21,9 @@ export function About() {
                     Machinery (ACM) and the Society of Hispanic Professional
                     Engineers (SHPE).
                 </p>
+                <Link href="https://github.com/hexbacon" target="_blank">
+                    <Button variant={"outline"} className="mt-10">Check My Projects</Button>
+                </Link>
             </div>
             <div className="lg:pt-0 sm:pt-10">
                 <Image className="rounded-lg" src="/assets/photo.jpeg" alt="Picture of me" width={340} height={300} />
